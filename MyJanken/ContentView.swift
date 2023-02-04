@@ -9,12 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        // グー画像を指定
-        Image("gu")
-        // リサイズを指定
-            .resizable()
-        // アスペクト比を維持しつつ画面に収める指定
-            .scaledToFit()
+        
+        VStack {
+            // グー画像を指定
+            Image("gu")
+            // リサイズを指定
+                .resizable()
+            // アスペクト比を維持しつつ画面に収める指定
+                .scaledToFit()
+        }
     }
 }
 
