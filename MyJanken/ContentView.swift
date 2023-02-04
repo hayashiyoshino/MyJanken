@@ -19,6 +19,14 @@ struct ContentView: View {
                 .scaledToFit()
             // じゃんけんの種類を指定
             Text("グー")
+            // [じゃんけんをする！]ボタン
+            Button {
+                // Buttonがタップされた時の動きを記述
+                print("タップされたよ！")
+            } label: {
+                // Buttonに表示する文字を指定
+                Text("じゃんけんをする！")
+            }
         }
     }
 }
