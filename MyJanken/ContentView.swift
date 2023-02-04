@@ -17,6 +17,8 @@ struct ContentView: View {
                 .resizable()
             // アスペクト比を維持しつつ画面に収める指定
                 .scaledToFit()
+            // じゃんけんの種類を指定
+            Text("グー")
         }
     }
 }
