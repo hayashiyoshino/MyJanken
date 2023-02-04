@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // じゃんけんの結果を格納する変数(0=初期画面 1=グー 2=チョキ 3=パー)
+    @State var answerNumber = 0
+    
     var body: some View {
         
         VStack {
