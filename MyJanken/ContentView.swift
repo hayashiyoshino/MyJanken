@@ -15,18 +15,34 @@ struct ContentView: View {
     var body: some View {
         
         VStack {
-            // グー画像を指定
-            Image("gu")
-            // リサイズを指定
-                .resizable()
-            // アスペクト比を維持しつつ画面に収める指定
-                .scaledToFit()
-            // じゃんけんの種類を指定
-            Text("グー")
+            
+            if answerNumber == 0 {
+                Text("これからじゃんけんをします")
+            } else if answerNumber == 1 {
+                // グー画像を指定
+                Image("gu")
+                // リサイズを指定
+                    .resizable()
+                // アスペクト比を維持しつつ画面に収める指定
+                    .scaledToFit()
+                // じゃんけんの種類を指定
+                Text("グー")
+            } else if answerNumber == 2 {
+                Image("choki")
+                    .resizable()
+                    .scaledToFit()
+                Text("チョキ")
+                
+            } else {
+                Image("pa")
+                    .resizable()
+                    .scaledToFit()
+                Text("パー")
+            }
+            
             // [じゃんけんをする！]ボタン
             Button {
-                // Buttonがタップされた時の動きを記述
-                print("タップされたよ！")
+                answerNumber = Int.random(in: 1...3)
             } label: {
                 // Buttonに表示する文字を指定
                 Text("じゃんけんをする！")
